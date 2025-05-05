@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Escape to Maco</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="../images/logo.png" alt="Escape to Maco Logo">
+            <h2>Escape to Maco</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="spots.html">Top Spots</a></li>
+            <li><a href="travel-tips.html">Travel Tips</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+   
+    <header class="page-header">
+        <div class="container">
+            <h1>Gallery</h1>
+            <p>Discover the beauty of Maco through our photo gallery</p>
+        </div>
+    </header>
+
+
+    <section class="section gallery-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Photo Gallery</h2>
+                <p>Take a visual tour of Maco's stunning landscapes and cultural heritage</p>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button id="load-more-btn" class="load-more">Load More</button>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">Escape to Maco</h3>
+                <p>Your ultimate guide to exploring Maco's hidden gems and popular destinations.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="spots.html">Top Spots</a></li>
+                    <li><a href="travel-tips.html">Travel Tips</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Us</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> info@escapetomaco.com</li>
+                    <li><i class="fas fa-phone"></i> +63 912 345 6789</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Maco, Davao de Oro, Philippines</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Escape to Maco. All rights reserved. | Designed by Lupoyon Delayht L.</p>
+            </div>
+        </div>
+    </footer>
+
+   
+     <div id="logout-confirmation" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to logout?</p>
+            <div class="modal-buttons">
+                <button onclick="confirmLogout()" class="btn primary">Yes</button>
+                <button onclick="cancelLogout()" class="btn secondary">No</button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .modal-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .modal-buttons .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-buttons .btn.primary {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .modal-buttons .btn.secondary {
+            background-color: #ccc;
+            color: #333;
+        }
+    </style>
+   <script>
+    function logout() {
+        document.getElementById("logout-confirmation").style.display = "block";
+    }
+
+    function confirmLogout() {
+        sessionStorage.removeItem('loggedIn');
+        sessionStorage.setItem('loggedOut', 'true'); 
+        location.replace("../index.html"); 
+    }
+
+    function cancelLogout() {
+        document.getElementById("logout-confirmation").style.display = "none";
+    }
+
+    function trapBackButton() {
+       
+        const isLoggedIn = sessionStorage.getItem('loggedIn') === 'true';
+        const isLoggedOut = sessionStorage.getItem('loggedOut') === 'true';
+
+        if (!isLoggedIn && isLoggedOut && window.location.pathname.endsWith("home.html")) {
+            history.pushState(null, null, window.location.href);
+            window.addEventListener('popstate', function () {
+           
+                history.pushState(null, null, window.location.href);
+                alert("You are logged out. Please log in again.");
+            });
+        }
+    }
+
+    window.onload = function () {
+        trapBackButton();
+
+        //**************** Redirect user back to login if they are logged out********//
+        const isLoggedIn = sessionStorage.getItem('loggedIn') === 'true';
+        const isLoggedOut = sessionStorage.getItem('loggedOut') === 'true';
+
+        if (!isLoggedIn && isLoggedOut && window.location.pathname.endsWith("home.html")) {
+            location.replace("../index.html"); 
+        }
+    };
+</script>
+
+
+    <script src="../scripts/gallery.js"></script>
+    <script src="../scripts/menu-bar.js"></script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Spots - Escape to Maco</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/spots.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+ 
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="../images/logo.png" alt="Escape to Maco Logo">
+            <h2>Escape to Maco</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="spots.html" class="active">Top Spots</a></li>
+            <li><a href="travel-tips.html">Travel Tips</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Top Spots in Maco</h1>
+            <p>Discover the most beautiful and exciting places to visit in Maco</p>
+        </div>
+    </header>
+
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="nature">Nature</option>
+                        <option value="culture">Cultural</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="leisure">Leisure</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="distance-filter">Distance:</label>
+                    <select id="distance-filter" class="filter-select">
+                        <option value="all">All Distances</option>
+                        <option value="near">Near (0-5 km)</option>
+                        <option value="medium">Medium (5-10 km)</option>
+                        <option value="far">Far (10+ km)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="search-spots">Search:</label>
+                    <input type="text" id="search-spots" placeholder="Search spots...">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="spots-section">
+        <div class="container">
+            <div class="spots-grid">
+                <!-- Spot 1 -->
+                <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/tagmanakaw falls.jpg" alt="Waterfall">
+                        <span class="spot-category nature">Nature</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>Tagmanakaw Falls</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i>  12 to 13 kilometers, from tagum City</span>
+                            <span><i class="fas fa-clock"></i> 1hour min travel</span>
+                
+                        </div>
+                        <p>Open Sunday to Friday with free entrance open 24 hours come and enjoy the experience!</p>
+                        <p> Located in Barangay Panibasan</p>
+                        <div class="spot-footer">
+                            <a href="spots/tagmanakaw-falls.html" class="btn outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Spot 2 -->
+                <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/New-Barili-Heights-and-Sights4.jpg" alt="Nature trip">
+                        <span class="spot-category culture">Natural</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>New Barili Mountain View Resort</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> 33 km from tagum City</span>
+                            <span><i class="fas fa-clock"></i> 45 minutes to 1 hour</span>
+                        </div>
+                        <p>Open Sunday to Friday, 24 hours open, with a ₱60 entrance fee come and enjoy the experience!</p>
+                        <p> Located in  Barangay New Barili</p>
+                        <div class="spot-footer">
+                            <a href="spots/new barili.html" class="btn outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Spot 3 -->
+                <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/final maco park_n.jpg" alt="Adventure Park">
+                        <span class="spot-category adventure">Adventure</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>Maco Adventure Park</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> 5 km from town</span>
+                            <span><i class="fas fa-clock"></i> 30 min travel</span>
+                        </div>
+                        <p>Open Sunday to Friday with free entrance come and enjoy the experience!</p>
+                        <p>Located In Maco Municipality!</p>
+                        <div class="spot-footer">
+                            <a href="spots/adventure-park.html" class="btn outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Spot 4 -->
+                <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/shesh.jpg" alt="Mountain View">
+                        <span class="spot-category nature">Nature</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>Stock caffe</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> 13 kilometer from tagum city</span>
+                            <span><i class="fas fa-clock"></i> 2 hours  travel</span>
+                            
+                        </div>
+                        <p>Open Sunday to Friday from 6 AM to 9pm no entrance fee just buy only come and enjoy the experience!</p>
+                        <p> Located in barangay Calabcab</p>
+                        <div class="spot-footer">
+                            <a href="spots/Stock.html" class="btn outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Spot 5 -->
+                <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/mainit fallsn.jpg" alt="Hot Springs">
+                        <span class="spot-category leisure">Leisure</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>  Bilawa Mainit Hot Springs</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> 20 km from town</span>
+                            <span><i class="fas fa-clock"></i>1 to 30 min</span>
+                        </div>
+                        <p>The resort is currently closed to the public until now</p>
+                        </p>  Located in Barangay Mainit<p>
+                        <div class="spot-footer">
+                            <a href="spots/mainit-springs.html" class="btn outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Spot 6 -->
+                <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/final coffe tambo_n.jpg" alt="Historical Site">
+                        <span class="spot-category culture">Nature</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>Tambo Cafe</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> 23 km from tagum City</span>
+                            <span><i class="fas fa-clock"></i>2 hours travel</span>
+                        </div>
+                        <p>Open Sunday to Friday from 7AM to 6PM with no Entrance Fee Just buy Only come and enjoy the experience!</p>
+                        <p> Located In Barangay New Leyte</p>
+                        <div class="spot-footer">
+                            <a href="spots/tambo.html" class="btn outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            
+         <!-- Spot 7-->
+                <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/mapaang gulf _n.jpg" alt="Hot Springs">
+                        <span class="spot-category leisure">Leisure</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>Mapaang Gulf</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> 10km from town</span>
+                            <span><i class="fas fa-clock"></i> 1 hour min travel</span>
+                        </div>
+                        <p> Open Sunday to Friday from 7 AM to 6PM with a ₱25 entrance fee come and enjoy the experience!</p>
+                        <p>Located In baragay Taglawig</p>
+                        <div class="spot-footer">
+                            <a href="spots/mapaang-gulf.html" class="btn outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Spot 8-->
+                 <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/Maco, Davao de Oro.jpg" alt="Hot Springs">
+                        <span class="spot-category leisure">Nature</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>Lake Leonard</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> 25 km from town</span>
+                            <span><i class="fas fa-clock"></i> 2 hours min travel</span>
+                        </div>
+                        <p>Open Sunday to Friday from 6 AM to 6PM with a ₱60 entrance fee come and enjoy the experience!</p>
+                        <p> Located In Barangay New Leyte</p>
+                        <div class="spot-footer">
+                            <a href="spots/lake leonard.html" class="btn outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Spot 9-->
+                 <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/cultural mansakan.jpg" alt="Mansaka Tribe">
+                        <span class="spot-category leisure">Cultural</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>Mansaka Tribe</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> </span>
+                            <span><i class="fas fa-clock"></i></span>
+                        </div>
+                        <p>Welcome to the vibrant world of the Mansaka a proud indigenous people of Davao de Oro, where tradition, music, and nature live in harmony.</p>
+                        <div class="spot-footer">
+                            <a href="spots/mansaka tribe.html" class="btn outline">View Details</a>
+
+                        </div>
+                    </div>
+                </div>
+                  <!-- Spot 10-->
+                <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/Bamboo Eco Park.jpg" alt="Waterfall">
+                        <span class="spot-category nature">Leisure</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>Bamboo Eco Park</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i>  4 kilometer, from tagum City</span>
+                            <span><i class="fas fa-clock"></i> 1hour min travel</span>
+                        </div>
+                        <p>Open Sunday to Friday from 8 AM to 5 PM with a ₱25 entrance fee come and enjoy the experience! </p>
+                        <p>Located In Barangay San Juan </p>
+                        <div class="spot-footer">
+                            <a href="spots/bamboo Grove.html" class="btn outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Spot 11 -->
+                 <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/Rancho Luisito.jpg" alt="Waterfall">
+                        <span class="spot-category nature">Leisure</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>Lyca Inland Resort</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> 31 kilometer, from tagum City</span>
+                            <span><i class="fas fa-clock"></i> 1hour min travel</span>
+                        </div>
+                        <p>Open Sunday to Friday from 6 AM to 9 PM with a ₱60 entrance fee come and enjoy the experience!</p>
+                        <p> Located In Barangay Elizalde</p>
+                        <div class="spot-footer">
+                            <a href="spots/Lyca Resort.html" class="btn outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+               <!-- Spot 12-->
+                <div class="spot-card">
+                    <div class="spot-thumbnail">
+                        <img src="../images/pasalubong ng bayan.jpg" alt="Waterfall">
+                        <span class="spot-category nature">Culture</span>
+                    </div>
+                    <div class="spot-details">
+                        <h3>Pasalubong ng bayan</h3>
+                        <div class="spot-meta">
+                            <span><i class="fas fa-map-marker-alt"></i>  12 to 13 kilometers, from tagum City</span>
+                            <span><i class="fas fa-clock"></i> 1hour min travel</span>
+                        </div>
+                        <p>Open Sunday to Friday from 8AM to 5 PM with no entrance fee come and enjoy the experience!</p>
+                        <p> Located in Maco</p>
+                        <div class="spot-footer">
+                            <a href="spots/Pasalubong ng Bayan.html" class="btn outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+    </section>
+
+   
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">Escape to Maco</h3>
+                <p>Your ultimate guide to exploring Maco's hidden gems and popular destinations.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="spots.html">Top Spots</a></li>
+                    <li><a href="travel-tips.html">Travel Tips</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Us</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> info@escapetomaco.com</li>
+                    <li><i class="fas fa-phone"></i> +63 912 345 6789</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Maco, Davao de Oro, Philippines</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Escape to Maco. All rights reserved. | Designed by Lupoyon Deliht L.</p>
+            </div>
+        </div>
+    </footer>
+
+     
+     <div id="logout-confirmation" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to logout?</p>
+            <div class="modal-buttons">
+                <button onclick="confirmLogout()" class="btn primary">Yes</button>
+                <button onclick="cancelLogout()" class="btn secondary">No</button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .modal-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .modal-buttons .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-buttons .btn.primary {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .modal-buttons .btn.secondary {
+            background-color: #ccc;
+            color: #333;
+        }
+    </style>
+  <script>
+    function logout() {
+        document.getElementById("logout-confirmation").style.display = "block";
+    }
+
+    function confirmLogout() {
+        sessionStorage.removeItem('loggedIn');
+        sessionStorage.setItem('loggedOut', 'true'); 
+        location.replace("../index.html"); 
+    }
+
+    function cancelLogout() {
+        document.getElementById("logout-confirmation").style.display = "none";
+    }
+
+    function trapBackButton() {
+
+        const isLoggedIn = sessionStorage.getItem('loggedIn') === 'true';
+        const isLoggedOut = sessionStorage.getItem('loggedOut') === 'true';
+
+        if (!isLoggedIn && isLoggedOut && window.location.pathname.endsWith("home.html")) {
+            history.pushState(null, null, window.location.href);
+            window.addEventListener('popstate', function () {
+            
+                history.pushState(null, null, window.location.href);
+                alert("You are logged out. Please log in again.");
+            });
+        }
+    }
+
+    window.onload = function () {
+        trapBackButton();
+
+        //******Redirect user back to login if they are logged out********//
+        const isLoggedIn = sessionStorage.getItem('loggedIn') === 'true';
+        const isLoggedOut = sessionStorage.getItem('loggedOut') === 'true';
+
+        if (!isLoggedIn && isLoggedOut && window.location.pathname.endsWith("home.html")) {
+            location.replace("../index.html"); 
+        }
+    };
+</script>
+
+
+    <script src="../scripts/menu-bar.js"></script>
+</body>
+</html>
